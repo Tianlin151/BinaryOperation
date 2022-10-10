@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/50道100以内的加减法算式.iml" filepath="$PROJECT_DIR$/.idea/50道100以内的加减法算式.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BinaryOperation/BinaryOperation.iml" filepath="$PROJECT_DIR$/BinaryOperation/BinaryOperation.iml" />
+    </modules>
+  </component>
+</project>
