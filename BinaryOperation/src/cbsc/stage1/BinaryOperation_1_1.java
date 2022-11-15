@@ -1,11 +1,13 @@
-package cbsc;
+package cbsc.stage1;
 
 import java.util.Random;
 
 /**
- * 代码2.1：一个Java程序，产生并逐行输出50道100以内的加减法算式
+ * 代码1.1：一个Java程序，产生并逐行输出50道100以内的加减法算式
+ * 实现：
+ *      通过for循环打印50到算式
  */
-public class BinaryOperation_01 {
+public class BinaryOperation_1_1 {
     public static void main(String[] args) {
         short m=0,n=0,ov=0;
         char o='+';
