@@ -80,7 +80,7 @@ public class ExerciseFileDAO {
      * @return
      */
     public Exercise readExerciseFromFile(String fileName, int number) {
-        Exercise exercise = new Exercise();
+        Exercise exercise = new Exercise(number);
         String equation;
         try {
             File exFile = new File(fileName);
@@ -100,5 +100,16 @@ public class ExerciseFileDAO {
             e.printStackTrace();
         }
         return exercise;
+    }
+
+    public Exercise readExerciseFromFile(OperationBase name,int number){
+        if((OperationBase.ADD).equals(name)){
+            return readExerciseFromFile(System.getProperty("user.dir") + "\\" + "exerciseAddFB.csv",number);
+        }else if((OperationBase.SUB).equals(name)){
+            return readExerciseFromFile(System.getProperty("user.dir") + "\\" + "exerciseSubFB.csv",number);
+        }else{
+            //若输入错误，则默认使用加减法混合算式基
+            return readExerciseFromFile(System.getProperty("user.dir") + "\\" + "exerciseAddAndSubFB.csv",number);
+        }
     }
 }

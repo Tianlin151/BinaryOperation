@@ -37,32 +37,26 @@ public class Student {
         Common.generateAddFormulaBasis();
         Common.generateSubFormulaBasis();
         Common.generateAddAndSubFormulaBasis();
+        System.out.println("算式基已生成！");
     }
 
     public static void main(String[] args) {
-        exercise = new Exercise(20);
+        int count =20;//题目个数
+        exercise = new Exercise(count);
+        //创建文件类对象
+        ExerciseFileDAO ex = new ExerciseFileDAO();
         //生成20到加减法混合算式题
-        exercise.generateExercise();
+//        exercise.generateExercise();
+        exercise = ex.readExerciseFromFile(OperationBase.BLEND,count);//使用算式基生成算式题
         //打印算式题
         System.out.println("算式题：");
         exercise.printExercise();
-        //创建文件类对象
-        ExerciseFileDAO ex = new ExerciseFileDAO();
-        System.out.println("加法算式基：");
-        Exercise exercise1 = ex.readExerciseFromFile(System.getProperty("user.dir") + "\\" + "exerciseAddFB.csv",20);
-        exercise1.printExercise();
-        System.out.println("减法算式基：");
-        Exercise exercise2 = ex.readExerciseFromFile(System.getProperty("user.dir") + "\\" + "exerciseSubFB.csv",20);
-        exercise2.printExercise();
-        System.out.println("加减法混合算式基：");
-        Exercise exercise3 = ex.readExerciseFromFile(System.getProperty("user.dir") + "\\" + "exerciseAddAndSubFB.csv",20);
-        exercise3.printExercise();
         //将算式题写入文件
-        ex.writeExerciseToFile(Student.exercise);
+        ex.writeExerciseToFile(exercise);
         //创建答案类对象
         answer = new Answer();
         //用户填写答案，参数为答题的个数
-        answer.scanAnswerFromKeyboard(10);
+        answer.scanAnswerFromKeyboard(count);
         //将答案写入到文件
         answer.writeAnswerToFile();
         //读取答案
@@ -100,6 +94,7 @@ public class Student {
     }
 
     public void practiceOneByOne() {
+        answer = new Answer();
         exercise.setIndex(0);
         int i = 1;
         System.out.println("输出答案后回车继续下一题");
