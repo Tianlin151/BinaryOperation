@@ -32,7 +32,7 @@ public class Student {
     public Student() {
     }
 
-    static{
+    public static void init(){
         //生成算式基
         Common.generateAddFormulaBasis();
         Common.generateSubFormulaBasis();
@@ -41,6 +41,7 @@ public class Student {
     }
 
     public static void main(String[] args) {
+        init();//初始化算式基
         int count =20;//题目个数
         exercise = new Exercise(count);
         //创建文件类对象
