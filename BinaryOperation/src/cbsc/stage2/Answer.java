@@ -82,6 +82,7 @@ public class Answer {
         Scanner sc = new Scanner(System.in);
         answer.clear();
         System.out.println("请按照题目序号依次输入答案后回车");
+        Common.startTime();
         for (int i = 1; i <= count; i++) {
 //            String s;
 //            while (true) {
@@ -101,6 +102,7 @@ public class Answer {
 //            answer.add(Integer.parseInt(s));
             answer.add(scNextInt(sc, i));
         }
+        Common.endTime();
 //        sc.close();
     }
 

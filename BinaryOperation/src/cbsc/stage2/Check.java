@@ -79,6 +79,7 @@ public class Check {
             out.write("算式总数：" + count + ";\r\n");
             out.write("正确：" + right + ";\r\n");
             out.write("错误：" + wrong + ";\r\n");
+            out.write("用时：" + Common.getTime() + "秒;\r\n");
             out.flush();
             out.close();
         } catch (IOException e) {
@@ -99,5 +100,6 @@ public class Check {
         System.out.println("算式总数：" + count);
         System.out.println("正确：" + right);
         System.out.println("错误：" + wrong);
+        System.out.println("用时：" + Common.getTime()+"秒");
     }
 }

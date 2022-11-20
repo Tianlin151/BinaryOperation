@@ -9,6 +9,24 @@ import java.util.*;
 
 public class Common {
 
+
+    public static long startTime;
+    public static long endTime;
+    public static double time;
+
+    public static void startTime(){
+        startTime = System.currentTimeMillis();
+    }
+
+    public static void endTime(){
+        endTime = System.currentTimeMillis();
+    }
+
+    public static double getTime(){
+        time = endTime - startTime;
+        return time/1000;
+    }
+
     //递归，判断是否为空
     public static boolean isDigit(String s) {
         if (null == s || "".equals(s)) {

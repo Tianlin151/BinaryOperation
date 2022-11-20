@@ -99,12 +99,14 @@ public class Student {
         exercise.setIndex(0);
         int i = 1;
         System.out.println("输出答案后回车继续下一题");
+        Common.startTime();
         while (exercise.hasNext()) {
             String s = exercise.next().toString2();
             System.out.print(intToString(i) + ") " + s);
             answer.add(scNextInt(i, s));
             i++;
         }
+        Common.endTime();
         check = new Check();
         check.check(exercise, answer);
         check.printCheck();
