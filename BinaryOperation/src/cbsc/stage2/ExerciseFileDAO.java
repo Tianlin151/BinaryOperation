@@ -102,10 +102,10 @@ public class ExerciseFileDAO {
         return exercise;
     }
 
-    public Exercise readExerciseFromFile(OperationBase name,int number){
-        if((OperationBase.ADD).equals(name)){
+    public Exercise readExerciseFromFile(ExerciseBase name, int number){
+        if((ExerciseBase.ADD).equals(name)){
             return readExerciseFromFile(System.getProperty("user.dir") + "\\" + "exerciseAddFB.csv",number);
-        }else if((OperationBase.SUB).equals(name)){
+        }else if((ExerciseBase.SUB).equals(name)){
             return readExerciseFromFile(System.getProperty("user.dir") + "\\" + "exerciseSubFB.csv",number);
         }else{
             //若输入错误，则默认使用加减法混合算式基

@@ -5,9 +5,6 @@ import cbsc.stage2.Common;
 import cbsc.stage2.ExerciseFileDAO;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.IOException;
-
 public class MyTest {
 
     @Test

@@ -76,10 +76,11 @@ public class Check {
             exFile.delete();
             exFile.createNewFile();
             out = new FileWriter(exFile, true);
+            double cccuracy = (double)right/count;
             out.write("算式总数：" + count + ";\r\n");
             out.write("正确：" + right + ";\r\n");
             out.write("错误：" + wrong + ";\r\n");
-            out.write("用时：" + Common.getTime() + "秒;\r\n");
+            out.write("正确率："+String.format("%.2f", cccuracy*100)+"%,\t"+"用时：" + Common.getTime() + "秒;\r\n");
             out.flush();
             out.close();
         } catch (IOException e) {
@@ -96,10 +97,11 @@ public class Check {
     }
 
     public void printCheck() {
+        double cccuracy = (double)right/count;
         System.out.println("本次练习批改结果：");
         System.out.println("算式总数：" + count);
         System.out.println("正确：" + right);
         System.out.println("错误：" + wrong);
-        System.out.println("用时：" + Common.getTime()+"秒");
+        System.out.println("正确率："+String.format("%.2f", cccuracy*100)+"%,\t"+"用时：" + Common.getTime()+"秒");
     }
 }

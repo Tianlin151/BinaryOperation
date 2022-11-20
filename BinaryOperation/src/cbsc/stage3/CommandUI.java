@@ -201,11 +201,11 @@ public class CommandUI {
         ExerciseFileDAO ex = new ExerciseFileDAO();
         if (index == 1) {
             //使用算式基生成算式题
-            exercise = ex.readExerciseFromFile(OperationBase.ADD,exercise.getCount());
+            exercise = ex.readExerciseFromFile(ExerciseBase.ADD,exercise.getCount());
         } else if (index == 2) {
-            exercise = ex.readExerciseFromFile(OperationBase.SUB,exercise.getCount());
+            exercise = ex.readExerciseFromFile(ExerciseBase.SUB,exercise.getCount());
         } else {
-            exercise = ex.readExerciseFromFile(OperationBase.BLEND,exercise.getCount());
+            exercise = ex.readExerciseFromFile(ExerciseBase.BLEND,exercise.getCount());
         }
         return exercise;
     }

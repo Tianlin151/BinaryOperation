@@ -7,6 +7,7 @@ import cbsc.stage1.SubEquation;
 
 import java.util.*;
 
+@SuppressWarnings(value = "all")
 public class Common {
 
 

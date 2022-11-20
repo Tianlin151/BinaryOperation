@@ -48,7 +48,7 @@ public class Student {
         ExerciseFileDAO ex = new ExerciseFileDAO();
         //生成20到加减法混合算式题
 //        exercise.generateExercise();
-        exercise = ex.readExerciseFromFile(OperationBase.BLEND,count);//使用算式基生成算式题
+        exercise = ex.readExerciseFromFile(ExerciseBase.BLEND,count);//使用算式基生成算式题
         //打印算式题
         System.out.println("算式题：");
         exercise.printExercise();
